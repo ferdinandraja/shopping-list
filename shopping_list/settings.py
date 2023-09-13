@@ -58,7 +58,7 @@ ROOT_URLCONF = 'shopping_list.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [BASE_DIR / 'templates'], # add this line
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
