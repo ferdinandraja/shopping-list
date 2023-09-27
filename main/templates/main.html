@@ -1,6 +1,15 @@
 {% extends 'base.html' %}
 
 {% block content %}
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+      <h3>{{name}}</h3>
+      <a class="navbar-brand" href="{% url 'main:logout' %}">Logout</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    </div>
+  </nav>
     <h1>Shopping List Page</h1>
 
     <h5>Name:</h5>
@@ -45,11 +54,6 @@
 <a href="{% url 'main:create_product' %}">
     <button>
         Add New Product
-    </button>
-</a>
-<a href="{% url 'main:logout' %}">
-    <button>
-        Logout
     </button>
 </a>
 {% endblock content %}
